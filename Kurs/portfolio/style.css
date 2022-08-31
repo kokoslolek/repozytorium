@@ -1,41 +1,116 @@
+:root{
+  --foreground-dark:#34128F;
+  --foreground-light:#9C78FF;
+  --background-dark:#8F8518;
+  --background-light:#DBD051;
+}
+*{box-sizing: border-box;}
 body { 
-  background-color: rgba(46, 139, 86, 0.997);
+  background-color: var(--background-dark);
   margin:0;
   min-height: 1000px;
 }
 
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+
 .bodyHeader{
-  border: 5px dashed red;
+  background-color: var(--background-light);
   display:flex;
   justify-content: space-between;
+  align-content: center;
+}
+
+label{
+  position:absolute;
+  width: 2rem;
+  height:2rem;
+  top: 0;
+  right: 0;
+  margin: .15rem;
+}
+
+label div{
+  width:80%;
+  background-color: #000;
+  position:absolute;
+  transition: .2s;
+  height: 2px;
+}
+
+label div:nth-child(1){
+  top:calc( 22% - 1px);
+}
+
+label div:nth-child(2){
+  top:calc( 50% - 1px);
+}
+ label div:nth-child(3){
+  top:calc(78% - 1px)
+}
+#toggler{
+  display: none;
+}
+nav{
+  display: flex;
   align-items: center;
-  position:sticky;
-  top:0;
 }
 
+#toggler:checked ~ label div:nth-child(1){
+  transform: rotate(45deg);
+  top: calc(50% - 1px);
+}
+#toggler:checked ~ label div:nth-child(2){
+  opacity:0;
+}
+#toggler:checked ~ label div:nth-child(3){
+  transform: rotate(-45deg);
+  top: calc(50% - 1px);
+}
 h1{
-  /* jeśli podajemy 2 wartości : poz y, poz x */
-  margin:6px 10px;
+  font-size: clamp(1rem, 2.5vw, 2rem);
 }
-
 ul{
   border:5px dashed yellow;
+  background-color: var(--foreground-light);
   list-style-type: none;
   margin:0;
   padding:0;
+  padding:.5rem;
   display:flex;
+  position:fixed;
+  right:-100%;
+  top:3rem;
+  right:-100%;
+  top:2.1rem;
+  height:calc(100% - 2.1rem);
+  transition:.5s;
+  flex-direction: column;
 }
+#toggler:checked ~  ul{
+  right: 0;
 
+}
 li{
-  border:5px dashed blue;
   top:0;
   left:0;
+  margin-left:.5rem;
 }
-/* warunek, wyłapujący wyświetlanie na telefonie */
-@media (max-width:768px){
+/* warunek, wyłapujący wyświetlanie na komputerze */
+@media (min-width:768px){
   ul{
     /* display:none; */
     flex-direction: column;
+    flex-direction: row;
+    position:static;
+    background-color: transparent;
+  }
+  label{
+    display:none;
+    display:none;
   }
 }
 
@@ -46,19 +121,15 @@ form{
   padding:15px;
   gap:5px;
 }
-
 input, textarea{
   padding:10px;
 }
-
 img{
   max-width: 100%;
 }
-
 form{
   width:50%;
 }
-
 .wrapper{
   /* border:5px dashed pink; */
   display:flex;
@@ -67,4 +138,4 @@ form{
 }
 .wrapper header{
   width:100%;
-}
+ }
