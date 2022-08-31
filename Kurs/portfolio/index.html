@@ -1,95 +1,114 @@
-<!-- ' "!" to jest na start, to co poniżej to jest z tego wykrzyknika   -->
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">  
 </head>
 <body>
-    <header>
-        <h1>NAGŁÓWEK</h1>
-    </header>
+  <header class="bodyHeader">
+    <h1>
+      Portfolio  Karol Kokoszka
+    </h1>
+  
+    <!-- GŁÓWNA NAWIGACJA -->
     <nav>
-    <h4>NAWIGACJA STRONY</h4>
+      <!-- ORDERED LIST - LISTA NUMEROWANA -->
+      <!-- LIST ITEM - ELEMENT LISTY -->
+      <!-- <ol>
+        <li>list item1 </li>
+        <li>list item2 </li>
+        <li>list item3 </li>
+      </ol> -->
+      <input type="checkbox" id="toggler">
+      <label for="toggler">
+        <div></div>
+        <div></div>
+        <div></div>
+      </label>
+
+      <!-- UNORDERED LIST - LISTA NIENUMEROWANA -->
+      <ul>
+        <li>
+          <a href="#about">O MNIE</a>
+        </li>
+        <li>
+          <a href="#skills">UMIĘTNOŚCI</a>
+        </li>
+        <li>
+          <a href="#contact">KONTAKT</a>
+        </li>
+      </ul>
+
     </nav>
+  </header>
 
-    <main>
-       <h4>CONTENT</h4> 
-       <!--WKLEJAMY SKĄD MAMY DANE ZDJĘCIE -->
-       <img src="https://freesvg.org/img/matt-icons_preferences-desktop-personal.png" 
-       alt="IMAGE">
-    </main>
+  <main class="wrapper">
+  <main id="about" class="wrapper">
+    <header>
+      <h2>O MNIE</h2>
+    </header>
+      <article>
+        <img src="https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2021/2/pr_2021_2_9_10_16_41_125_00.jpg" alt="laptop" />
+      </article>
+  </main>
 
+  <article class="wrapper">
+  <article id="skills" class="wrapper">
+    <header>
+      <h2>UMIĘTNOŚCI</h2>
+    </header>
 
+    <!-- im większy border tym grubsza tabelka -->
+    <table border="3">
+      <!-- nagłówek tabeli -->
+      <thead>
+        <!-- wiersz nagłówkowy -->
+        <tr>
+          <!-- TABLE HEADING komórka nagłówka -->
+          <th>LP. </th>
+          <th>TECHNOLOGIA</th>
+          <th>BIEGŁOŚĆ</th>
+        </tr>
+      </thead>
 
+      <!-- tabela właściwa (dane) -->
+      <tbody>
+        <!-- TABLE ROW (wiersz) -->
+        <tr>
+          <!-- TABLE DIVIDE (podział wiersza) -->
+          <td>1</td>
+          <td>HTML</td>
+          <td>⭐⭐⭐</td>
+        </tr>
 
-<!-- JEST NIEZALEŻNE OD RESZTY STRONY -->
-    <article>
-    
-        <header>
-            <h2>NAGŁÓWEK AUTONOMICZEJ<br/> 
-              CZĘŚCI STRONY</h2>
-        </header>
+        <tr>
+          <td>2</td>
+          <td>CSS</td>
+          <td>⭐</td>
+        </tr>
 
-
-
-
-        <!-- BORDER TO GRUBOŚĆ OBRAMOWANIA TABELKI -->
-
-        <table border="8">
-            <!--nagłówek tabeli -->
-            <thead>
-                <tr>
-            <th>HTML</th>
-            <th>⭐⭐</th>
-                 </tr>
-             </thead>
-             
-             <!-- nagłówek właściwy (dane tabeli) -->
-             <tbody>
-                <tr>
-                <td>OTHER</td>
-                <td>⭐⭐⭐</td>
-                </tr>
-        
-            </tbody>
-        </table>
-     
-    </article>
-
-    <section>
-       <h4>TEMATYCZNE ZGRUPOWANY KONTENT</h4> 
-
-       <!-- KIEDY CHCEMY 1,2,3,ITD. -->
-       <ol>
-        <li>Projekt 1</li>
-        <li>Projekt 2</li>
-        <li>Projekt 3</li>
-       </ol>
-
-       <!-- KIEDY NIE CHCEMY NUMEROWANEGO -->
-       <ul>
-        <li>Projekt 1</li>
-        <li>Projekt 2</li>
-        <li>Projekt 3</li>
-       </ul>
-
-    </section>
-
-    <article>
-        <h3>NAPISZ WIADOMOŚĆ</h3>
-    </article>
+      </tbody>
+    </table>
+  </article>
 
 
-    <form action="result.html" method="post|get">
-        <input type="text" name="firstName" />
-        <textarea name="" id="" cols="50" rows="10"></textarea>
-        <input type="submit"/>
+  <section class="wrapper">
+  <section id="contact" class="wrapper">
+    <header>
+      <h2>KONTAKT</h2>
+    </header>
+    <form>
+      <input type="email" placeholder="EMAIL" />
+      <input type="text" placeholder="TYTUŁ">
+      <textarea cols="21" rows="5" placeholder="WIADOMOŚĆ"></textarea>
+      <input type="submit" value="WYŚLIJ">
     </form>
-    <footer>
-        <h4>STOPKA STRONY</h4>
-    </footer>
+  </section>
+  <footer>
+    STOPKA
+  </footer>
+</body>
 </html>

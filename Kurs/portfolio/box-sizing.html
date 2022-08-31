@@ -1,0 +1,63 @@
+     <!-- BOXSIZING-->
+    <style>
+        *{
+            box-sizing: border-box; /* takie cos co wyrównuje*/ 
+        }
+        .parent{
+            border:20px solid green;
+        }
+        .child{
+            border: 20px solid blue;
+            width:100%;
+            padding: 10px;;
+        }
+    </style>
+    <div class="parent">
+        <div class="child">
+            dziecko
+        </div>
+    </div>
+    
+    <!-- VIEWPORT-->
+    <style>
+        .viewport{
+            border: 5px solid red;
+            height: 50vh;
+
+        }
+    </style>
+    <div class="viewport"></div>
+
+    <!-- CZCIONKA -->
+    <!-- EM --> 
+    <style>
+        .em{
+            font-size: 2em;
+        }
+
+        .root{
+           /* font-size: 15px;*/
+        }
+        .rem{
+            font-size: 2rem;
+        }
+    </style>
+    <div class="em">
+        DZIADEK
+        <div class="em">
+            OJCIEC
+            <div class="em">
+                SYN
+            </div>
+        </div>
+    </div>
+    <!-- REM -->
+    <div class="rem">
+        DZIADEK
+        <div class="rem">
+            OJCIEC
+            <div class="rem">
+                SYN
+            </div>
+        </div>
+    </div>
