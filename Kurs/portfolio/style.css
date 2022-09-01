@@ -3,8 +3,12 @@
   --foreground-light:#5fa4ea;
   --background-dark:#4568d4;
   --background-light:#5fa4ea;
+  --default-box-shadow: 
 }
 *{box-sizing: border-box;}
+htlm{
+  scroll-behavior: smooth;
+}
 body { 
   background-color: var(--background-dark);
   margin:0;
@@ -126,20 +130,18 @@ li{
 }
 
 form{
-  border:5px dashed #ff9a00;
   display:flex;
   flex-direction: column;
-  padding:25px;
+  padding:1rem;
   gap:5px;
-}
+  background-color: var(--foreground-light);
+  margin: 0 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;}
 input, textarea{
   padding:10px;
 }
 img{
   max-width: 100%;
-}
-form{
-  width:100%;
 }
 .wrapper{
   /* border:5px dashed pink; */
@@ -166,13 +168,12 @@ form{
   padding: 0.2rem;
 }
 table{
-  border: 5px dashed orange;
   width: 100%;
   padding: 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-th{
-  background-color:#4a19d3 ;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+ }
+  th{
+  background-color: #4a19d3;
 }
 /*
 td{
@@ -187,4 +188,15 @@ tr:nth-child(even){
 /*PARZYSTE ELEMENTY*/
 tr:nth-child(odd){
   background-color: white;
+}
+footer{
+  margin-top: 3rem;
+  background-color: #000;
+  color: rgb(225, 225, 225);
+  font-size: .8rem;
+}
+ol{
+  list-style-type: style none;
+  margin: 0;
+  padding: 1rem;
 }
