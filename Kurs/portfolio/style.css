@@ -9,6 +9,8 @@ body {
   background-color: var(--background-dark);
   margin:0;
   min-height: 1000px;
+  font-family: 'Secular One', sans-serif;
+
 }
 
 a{
@@ -146,3 +148,9 @@ form{
 .wrapper header{
   width:100%;
  }
+.wrapper h2{
+  margin: 0;
+}
+.wrapper p{
+  margin: 0;
+}
