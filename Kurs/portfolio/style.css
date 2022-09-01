@@ -6,9 +6,7 @@
   --default-box-shadow: 
 }
 *{box-sizing: border-box;}
-htlm{
-  scroll-behavior: smooth;
-}
+html{scroll-behavior: smooth;}
 body { 
   background-color: var(--background-dark);
   margin:0;
