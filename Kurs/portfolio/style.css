@@ -151,7 +151,7 @@ form{
 }
 .wrapper header{
   width:10 ;
- }
+}
 .wrapper h2{
   margin: 0;
 }
@@ -160,6 +160,10 @@ form{
   margin-bottom: 1rem;
   padding: .5rem;
   line-height: 1.7rem;
+}
+/* div na którem osadzamy tabelkę */
+.tableWrapper{
+  padding: 0.2rem;
 }
 table{
   border: 5px dashed orange;
@@ -171,5 +175,5 @@ th{
   background-color:#34128F ;
 }
 td{
-  background: color #5337a0;;
+  background: color #907acd;
 }
