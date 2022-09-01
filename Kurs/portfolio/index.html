@@ -15,7 +15,7 @@
 <body>
   <header class="bodyHeader">
     <h1>
-      Portfolio : Karol Kokoszka 😊
+      Portfolio - Karol Kokoszka 😊
     </h1>
   
     <!-- GŁÓWNA NAWIGACJA -->
@@ -38,19 +38,19 @@
       <ul>
         <li>
           <a href="#about">
-            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">person</span>
             O MNIE
           </a>
         </li>
         <li>
           <a href="#skills">
-            <span class="material-symbols-outlined">home</span>
+            <span class="material-symbols-outlined">star</span>
             UMIĘTNOŚCI
           </a>
         </li>
         <li>
           <a href="#contact">
-            <span class="material-symbols-outlined">Reply</span>
+            <span class="material-symbols-outlined">Phone</span>
             KONTAKT
           </a>
         </li>
@@ -77,39 +77,39 @@
     </header>
       <div class="content">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iure quisquam eaque, culpa perspiciatis explicabo tempore reiciendis facilis impedit et? Atque vero obcaecati reprehenderit illo laborum dolores explicabo dolorem inventore?</p>
+        <!-- im większy border tym grubsza tabelka -->
+        <table border="3">
+          <!-- nagłówek tabeli -->
+          <thead>
+            <!-- wiersz nagłówkowy -->
+            <tr>
+              <!-- TABLE HEADING komórka nagłówka -->
+              <th>LP. </th>
+              <th>TECHNOLOGIA</th>
+              <th>BIEGŁOŚĆ</th>
+            </tr>
+          </thead>
+    
+          <!-- tabela właściwa (dane) -->
+          <tbody>
+            <!-- TABLE ROW (wiersz) -->
+            <tr>
+              <!-- TABLE DIVIDE (podział wiersza) -->
+              <td>1</td>
+              <td>HTML</td>
+              <td>⭐⭐⭐</td>
+            </tr>
+    
+            <tr>
+              <td>2</td>
+              <td>CSS</td>
+              <td>⭐</td>
+            </tr>
+    
+          </tbody>
+        </table>
       </div>
 
-    <!-- im większy border tym grubsza tabelka -->
-    <table border="3">
-      <!-- nagłówek tabeli -->
-      <thead>
-        <!-- wiersz nagłówkowy -->
-        <tr>
-          <!-- TABLE HEADING komórka nagłówka -->
-          <th>LP. </th>
-          <th>TECHNOLOGIA</th>
-          <th>BIEGŁOŚĆ</th>
-        </tr>
-      </thead>
-
-      <!-- tabela właściwa (dane) -->
-      <tbody>
-        <!-- TABLE ROW (wiersz) -->
-        <tr>
-          <!-- TABLE DIVIDE (podział wiersza) -->
-          <td>1</td>
-          <td>HTML</td>
-          <td>⭐⭐⭐</td>
-        </tr>
-
-        <tr>
-          <td>2</td>
-          <td>CSS</td>
-          <td>⭐</td>
-        </tr>
-
-      </tbody>
-    </table>
   </article>
 
 
@@ -118,15 +118,19 @@
     <header>
       <h3>KONTAKT</h3>
     </header>
-    <form>
-      <input type="email" placeholder="EMAIL" />
-      <input type="text" placeholder="TYTUŁ">
-      <textarea cols="21" rows="5" placeholder="WIADOMOŚĆ"></textarea>
-      <input type="submit" value="WYŚLIJ">
-    </form>
+    <div class="content">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus pariatur accusamus, voluptas asperiores quo libero quidem distinctio sapiente hic debitis ipsum cupiditate tempore ex optio sunt doloribus. Necessitatibus, corrupti.</p>
+        <form>
+          <input type="email" placeholder="EMAIL" />
+          <input type="text" placeholder="TYTUŁ">
+          <textarea cols="21" rows="5" placeholder="WIADOMOŚĆ"></textarea>
+          <input type="submit" value="WYŚLIJ">
+        </form>
+      </div>
   </section>
   <footer>
-    STOPKA
+    "STOPKA"
   </footer>
 </body>
 </html>
