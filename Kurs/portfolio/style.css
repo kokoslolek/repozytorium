@@ -1,8 +1,8 @@
 :root{
   --foreground-dark:#34128F;
-  --foreground-light:#9C78FF;
-  --background-dark:#8F8518;
-  --background-light:#DBD051;
+  --foreground-light:#5fa4ea;
+  --background-dark:#4568d4;
+  --background-light:#5fa4ea;
 }
 *{box-sizing: border-box;}
 body { 
@@ -39,6 +39,7 @@ label div{
   position:absolute;
   transition: .2s;
   height: 2px;
+  font-family: 'Secular One', sans-serif;
 }
 
 label div:nth-child(1){
@@ -115,7 +116,7 @@ li{
 }
 
 form{
-  border:5px dashed red;
+  border:5px dashed #ff8800;
   display:flex;
   flex-direction: column;
   padding:15px;
