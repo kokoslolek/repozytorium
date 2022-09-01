@@ -172,8 +172,19 @@ table{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 th{
-  background-color:#34128F ;
+  background-color:#4a19d3 ;
 }
+/*
 td{
-  background: color #907acd;
+  background-color: #907acd;
+}
+*/
+
+/*NIEPAŻYSTE ELEMENTY*/
+tr:nth-child(even){
+  background-color: #5c39ae;
+}
+/*PARZYSTE ELEMENTY*/
+tr:nth-child(odd){
+  background-color: white;
 }
