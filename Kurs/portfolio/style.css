@@ -22,6 +22,8 @@ a{
   display:flex;
   justify-content: space-between;
   align-content: center;
+  position:sticky;
+  top:0;
 }
 
 label{
@@ -75,19 +77,19 @@ h1{
   font-size: clamp(1rem, 2.5vw, 2rem);
 }
 ul{
-  border:5px dashed yellow;
+  border:5px dashed #ff9a00;
   background-color: var(--foreground-light);
   list-style-type: none;
-  margin:0;
+  margin: 0;;
   padding:0;
   padding:.5rem;
   display:flex;
   position:fixed;
   right:-100%;
-  top:3rem;
+  top: 3rem;
   right:-100%;
   top:2.1rem;
-  height:calc(100% - 2.1rem);
+  height:calc(100% - 1.5rem);
   transition:.5s;
   flex-direction: column;
 }
@@ -116,10 +118,10 @@ li{
 }
 
 form{
-  border:5px dashed #ff8800;
+  border:5px dashed #ff9a00;
   display:flex;
   flex-direction: column;
-  padding:15px;
+  padding:25px;
   gap:5px;
 }
 input, textarea{
