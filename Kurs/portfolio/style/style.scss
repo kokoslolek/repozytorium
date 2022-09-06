@@ -1,0 +1,12 @@
+body{ 
+    background-color:red; 
+    border:2px dashed red;
+
+    .bodyHeader{
+        border: 2px dashed blue;
+
+        h1{
+            margin:0;
+        }
+    }   
+}

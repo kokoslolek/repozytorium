@@ -1,4 +1,10 @@
 body {
   background-color: red;
   border: 2px dashed red;
+}
+body .bodyHeader {
+  border: 2px dashed blue;
+}
+body .bodyHeader h1 {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
