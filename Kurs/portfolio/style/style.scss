@@ -213,15 +213,27 @@
   
   /* warunek, wyłapujący wyświetlanie na komputerze */
   @media (min-width:768px){
-    // body .bodyHeader nav ul {
-    //   flex-direction: row;
-    //   position:static;
-    // }
-    ul {
-      flex-direction: row !important;
-      position:static !important;
+  body{
+    .bodyHeader nav{
+      ul {
+        flex-direction: row;
+        position:static;
+      }
+      label{
+        display:none;
+      }
+      }
+      .wrapper{
+        min-height:90vh;
+        flex-direction: row;
+        &:nth-child(odd){
+          flex-direction: row-reverse;
+        }
+        > * {
+          flex:1;
+          text-align: center;
+          padding: 3rem;
+        }
+      }
     }
-    label{
-      display:none;
-    }
-  }
+ }

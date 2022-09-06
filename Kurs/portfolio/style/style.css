@@ -192,11 +192,23 @@ body footer p {
 
 /* warunek, wyłapujący wyświetlanie na komputerze */
 @media (min-width: 768px) {
-  ul {
-    flex-direction: row !important;
-    position: static !important;
+  body .bodyHeader nav ul {
+    flex-direction: row;
+    position: static;
   }
-  label {
+  body .bodyHeader nav label {
     display: none;
+  }
+  body .wrapper {
+    min-height: 90vh;
+    flex-direction: row;
+  }
+  body .wrapper:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  body .wrapper > * {
+    flex: 1;
+    text-align: center;
+    padding: 3rem;
   }
 }
