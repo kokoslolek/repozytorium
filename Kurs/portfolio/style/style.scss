@@ -2,225 +2,226 @@
     --foreground-dark:#34128F;
     --foreground-light:#9C78FF;
     --foreground-lighter:#cfbdff;
-    --background-dark:#3229dc;
-    --background-light:#0d5c9c;
+    --background-dark:#8F8518;
+    --background-light:#DBD051;
     --default-box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    
-}
-*{
-    *{box-sizing: border-box;}
+  }
+  *{
+    box-sizing: border-box; 
     a{
-        text-decoration:none;
-        color:inherit;
-        display:flex;
-        align-items: center;
+      text-decoration:none;
+      color:inherit;
+      display:flex;
+      align-items: center;
     }
     .material-symbols-outlined{
-        margin:.25rem;
+      margin:.25rem;
     }
-}
-// tak sie robi komentarze tutaj //
-html{scroll-behavior: smooth;}
-
-body { 
+  }
+  html{ scroll-behavior: smooth; }
+  body { 
     background-color: var(--background-dark);
     margin:0;
     min-height: 1000px;
     font-family: 'Secular One', sans-serif;
-
-
+  
     .bodyHeader{
       background-color: var(--background-light);
       display:flex;
       justify-content: space-between;
       align-items: center;
-      /* position:sticky; */
       position: fixed;
       width:100%;
       top:0;
       box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
       
       h1{
-          /* jeśli podajemy 2 wartości : poz y, poz x */
-          margin:6px 10px;
-          /* clamp przyjmuje wartości - najmniejsza możliwa czionka (na ile najmniej
-          może się wyświetlić, średnia i największa) */
-          font-size: clamp(1.3rem, 2.5vw, 1.8rem); 
-        }
-
-        nav{
-            #toggler{
-              display:none;
-              // & to odniesienie do tego samego(w tym przypadku do togglera ale żeby nie powaratrzć)// 
-              &:checked{
-                  ~ ul{
-                    right:0;
-                  }
-            
-                  ~ label div{
-                      &:nth-child(1){
-                      transform: rotate(45deg);
-                      top: calc(50% - 1px);
-                      }
-              
-                      &:nth-child(2){
-                      opacity:0;
-                      }
-              
-                      &:nth-child(3){
-                      transform: rotate(-45deg);
-                      top: calc(50% - 1px);
-                  }
-                }
-              }
-            }
-            
-            label{
-              width:2rem;
-              height:2rem;
-              position:absolute;
-              top:0;
+        /* jeśli podajemy 2 wartości : poz y, poz x */
+        margin:6px 10px;
+        /* clamp przyjmuje wartości - najmniejsza możliwa czionka (na ile najmniej
+        może się wyświetlić, średnia i największa) */
+        font-size: clamp(1.3rem, 2.5vw, 1.8rem); 
+      }
+  
+      nav{
+        #toggler{
+          display:none;
+          &:checked {
+            ~ ul {
               right:0;
-              margin:.15rem;
-              div{
-                height:2px;
-                width:80%;
-                background-color: #000;
-                position:absolute;
-                transition: .2s;
-                &:nth-child(1){
-                top:calc( 22% - 1px);
-              }
-                &:nth-child(2){
-                top:calc( 50% - 1px);
-              }
-                &:nth-child(3){
-                top:calc( 78% - 1px);
-              }
             }
-            }
-            
-            ul{
-              background-color: var(--background-light);
-              list-style-type: none;
-              margin:0;
-              padding:.5rem;
-              display:flex;
-              position:fixed;
-              right:-100%;
-              top:2.1rem;
-              height:calc(100% - 2.1rem);
-              transition:.5s;
-              flex-direction: column;
-              li{
-                  top:0;
-                  left:0;
-                  margin:.3rem;
+            ~ label div{
+              &:nth-child(1){
+                transform: rotate(45deg);
+                top: calc(50% - 1px);
               }
-            }
+              &:nth-child(2){
+                opacity:0;
+              }
+              &:nth-child(3){
+                transform: rotate(-45deg);
+                top: calc(50% - 1px);
+              }
+            } 
+          }
         }
-    }
-}
   
-  /* warunek, wyłapujący wyświetlanie na komputerze */
-  @media (min-width:768px){
-    ul{
-      flex-direction: row;
-      position:static;
-      background-color: transparent;
-    }
-    label{
-      display:none;
-      display:none;
-    }
-  }
+        label{
+          width:2rem;
+          height:2rem;
+          position:absolute;
+          top:0;
+          right:0;
+          margin:.15rem;
+          div{
+            height:2px;
+            width:80%;
+            background-color: #000;
+            position:absolute;
+            transition: .2s;
+            &:nth-child(1){
+              top:calc( 22% - 1px);
+            }
+            &:nth-child(2){
+              top:calc( 50% - 1px);
+            }
+            &:nth-child(3){
+              top:calc( 78% - 1px);
+            }
+          }
+        }
   
-  .wrapper{
+        ul{
+          position:fixed;
+          flex-direction: column;
+          background-color: var(--background-light);
+          list-style-type: none;
+          margin:0;
+          padding:.5rem;
+          display:flex;
+          right:-100%;
+          top:2.1rem;
+          height:calc(100% - 2.1rem);
+          transition:.5s;
+          li{
+            top:0;
+            left:0;
+            margin:.3rem;
+          }
+        }
+      }
+  
+    }
+  
+    .wrapper{
       display:flex;
       flex-direction: column;
       align-items: center;
       padding: 3.5rem .5rem 0 .5rem;
+  
       header{
-          width:100%;
-          h2 {
-              margin:0;
-            }
-        } 
-        .content{
-            p  {
-                margin:0;
-                margin-bottom:2rem;
-                line-height: 1.2rem;
-            }
-            img{
-                max-width: 100%;
-            }
-            .tableWrapper{
-                /* dajemy padding tylko z prawej i lewej strony */
-                padding: 0 1rem;
-            }
-            form{
-              display:flex;
-              flex-direction: column;
-              padding:1rem;
-              margin:0 1rem;
-              gap:5px;
-              background: var(--foreground-lighter);
-              box-shadow: var(--default-box-shadow);
-              border-radius: .5rem;
-              input, textarea{
-                padding:10px;
-              }
-            }
-            
-        }
-    }
-
-  // div na któym osadzamy tabelkę //
-  table{
-    /* box shadow ze strony https://getcssscan.com/css-box-shadow-examples*/
-    box-shadow: var(--default-box-shadow);
-    /* max szerokość strony */
-    width:100%;
-    /* usuwamy granice pomiędzy wierszami i kolumnami */
-    border-collapse: collapse;
-    tr{
-      background: var(--foreground-light);
-      /* even|odd - co drugie dziecko */
-      &:nth-child( even ){
-        background: var(--foreground-lighter);
-        th{
-          /* ustawiamy kolor ze zmiennych */
-          background-color: var(--foreground-dark);
-          padding:.5rem;
-        }
-        
-        td{
-          padding:.3rem;
+        width:100%;
+        h2 {
+          margin:0;
         }
       }
-
-    }
-
-  }
   
-  footer{
-    /* border:2px dashed red; */
-    margin-top:3rem;
-    background-color: #000;
-    color:rgb(255, 255, 255);
-    font-size:.8rem;
-    display:flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding:1rem;
-    ol{
+      .content{
+        p {
+          margin:0;
+          margin-bottom:2rem;
+          line-height: 1.2rem;
+        }
+  
+        img{
+          max-width: 100%;
+        }
+  
+        /* div na którym osadzamy tabelkę */
+        .tableWrapper{
+          /* dajemy padding tylko z prawej i lewej strony */
+          padding: 0 1rem;
+  
+          table{
+            /* box shadow ze strony https://getcssscan.com/css-box-shadow-examples*/
+            box-shadow: var(--default-box-shadow);
+            /* max szerokość strony */
+            width:100%;
+            /* usuwamy granice pomiędzy wierszami i kolumnami */
+            border-collapse: collapse;
+  
+            tr{
+              background: var(--foreground-light);
+              /* even|odd - co drugie dziecko */
+              &:nth-child( even ){
+                background: var(--foreground-lighter);
+              }
+  
+              th{
+                /* ustawiamy kolor ze zmiennych */
+                background-color: var(--foreground-dark);
+                padding:.5rem;
+              }
+  
+              td{
+                padding:.3rem;
+              }
+  
+            }
+          }
+        }
+  
+        form{
+          display:flex;
+          flex-direction: column;
+          padding:1rem;
+          margin:0 1rem;
+          gap:5px;
+          background: var(--foreground-lighter);
+          box-shadow: var(--default-box-shadow);
+          border-radius: .5rem;
+          input, textarea{
+            padding:10px;
+          }
+  
+        }
+  
+      }
+    }
+  
+    footer{
+      /* border:2px dashed red; */
+      margin-top:3rem;
+      background-color: #000;
+      color:rgb(255, 255, 255);
+      font-size:.8rem;
+      display:flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding:1rem;
+      ol{
         list-style: none;
         margin:0;
         padding:0;
-        
       }
-    p {
+      p {
         margin:0;
       }
+    }
+  
+  }
+  
+  /* warunek, wyłapujący wyświetlanie na komputerze */
+  @media (min-width:768px){
+    // body .bodyHeader nav ul {
+    //   flex-direction: row;
+    //   position:static;
+    // }
+    ul {
+      flex-direction: row !important;
+      position:static !important;
+    }
+    label{
+      display:none;
+    }
   }
