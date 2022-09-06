@@ -1,8 +1,4 @@
 @charset "UTF-8";
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --foreground-dark:#34128F;
   --foreground-light:#9C78FF;
@@ -10,6 +6,19 @@
   --background-dark:#3229dc;
   --background-light:#0d5c9c;
   --default-box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+* * {
+  box-sizing: border-box;
+}
+* a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+* .material-symbols-outlined {
+  margin: 0.25rem;
 }
 
 html {
@@ -21,15 +30,6 @@ body {
   margin: 0;
   min-height: 1000px;
   font-family: "Secular One", sans-serif;
-}
-body a {
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  align-items: center;
-}
-body .material-symbols-outlined {
-  margin: 0.25rem;
 }
 body .bodyHeader {
   background-color: var(--background-light);
@@ -49,26 +49,24 @@ body .bodyHeader h1 {
   może się wyświetlić, średnia i największa) */
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
 }
-
-#toggler {
+body .bodyHeader nav #toggler {
   display: none;
 }
-#toggler:checked ~ ul {
+body .bodyHeader nav #toggler:checked ~ ul {
   right: 0;
 }
-#toggler:checked ~ label div:nth-child(1) {
+body .bodyHeader nav #toggler:checked ~ label div:nth-child(1) {
   transform: rotate(45deg);
   top: calc(50% - 1px);
 }
-#toggler:checked ~ label div:nth-child(2) {
+body .bodyHeader nav #toggler:checked ~ label div:nth-child(2) {
   opacity: 0;
 }
-#toggler:checked ~ label div:nth-child(3) {
+body .bodyHeader nav #toggler:checked ~ label div:nth-child(3) {
   transform: rotate(-45deg);
   top: calc(50% - 1px);
 }
-
-label {
+body .bodyHeader nav label {
   width: 2rem;
   height: 2rem;
   position: absolute;
@@ -76,28 +74,23 @@ label {
   right: 0;
   margin: 0.15rem;
 }
-
-label div {
+body .bodyHeader nav label div {
   height: 2px;
   width: 80%;
   background-color: #000;
   position: absolute;
   transition: 0.2s;
 }
-
-label div:nth-child(1) {
+body .bodyHeader nav label div:nth-child(1) {
   top: calc(22% - 1px);
 }
-
-label div:nth-child(2) {
+body .bodyHeader nav label div:nth-child(2) {
   top: calc(50% - 1px);
 }
-
-label div:nth-child(3) {
+body .bodyHeader nav label div:nth-child(3) {
   top: calc(78% - 1px);
 }
-
-ul {
+body .bodyHeader nav ul {
   background-color: var(--background-light);
   list-style-type: none;
   margin: 0;
@@ -110,8 +103,7 @@ ul {
   transition: 0.5s;
   flex-direction: column;
 }
-
-li {
+body .bodyHeader nav ul li {
   top: 0;
   left: 0;
   margin: 0.3rem;
@@ -129,7 +121,31 @@ li {
     display: none;
   }
 }
-form {
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.5rem 0.5rem 0 0.5rem;
+}
+.wrapper header {
+  width: 100%;
+}
+.wrapper header h2 {
+  margin: 0;
+}
+.wrapper .content p {
+  margin: 0;
+  margin-bottom: 2rem;
+  line-height: 1.2rem;
+}
+.wrapper .content img {
+  max-width: 100%;
+}
+.wrapper .content .tableWrapper {
+  /* dajemy padding tylko z prawej i lewej strony */
+  padding: 0 1rem;
+}
+.wrapper .content form {
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -139,40 +155,8 @@ form {
   box-shadow: var(--default-box-shadow);
   border-radius: 0.5rem;
 }
-
-input, textarea {
+.wrapper .content form input, .wrapper .content form textarea {
   padding: 10px;
-}
-
-img {
-  max-width: 100%;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3.5rem 0.5rem 0 0.5rem;
-}
-
-.wrapper header {
-  width: 100%;
-}
-
-.wrapper h2 {
-  margin: 0;
-}
-
-.wrapper p {
-  margin: 0;
-  margin-bottom: 2rem;
-  line-height: 1.2rem;
-}
-
-/* div na któym osadzamy tabelkę */
-.tableWrapper {
-  /* dajemy padding tylko z prawej i lewej strony */
-  padding: 0 1rem;
 }
 
 table {
@@ -183,24 +167,20 @@ table {
   /* usuwamy granice pomiędzy wierszami i kolumnami */
   border-collapse: collapse;
 }
-
-th {
+table tr {
+  background: var(--foreground-light);
+  /* even|odd - co drugie dziecko */
+}
+table tr:nth-child(even) {
+  background: var(--foreground-lighter);
+}
+table tr:nth-child(even) th {
   /* ustawiamy kolor ze zmiennych */
   background-color: var(--foreground-dark);
   padding: 0.5rem;
 }
-
-td {
+table tr:nth-child(even) td {
   padding: 0.3rem;
-}
-
-tr {
-  background: var(--foreground-light);
-}
-
-/* even|odd - co drugie dziecko */
-tr:nth-child(even) {
-  background: var(--foreground-lighter);
 }
 
 footer {
@@ -214,13 +194,11 @@ footer {
   align-items: flex-end;
   padding: 1rem;
 }
-
 footer ol {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 footer p {
   margin: 0;
 }
