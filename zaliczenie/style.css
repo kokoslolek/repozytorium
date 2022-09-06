@@ -1,0 +1,10 @@
+table{
+padding:.5rem;
+margin: auto;
+}
+th{
+    background-color: #5a97de;}
+tr:nth-child(even){
+    background-color: #5a97de;}
+tr:nth-child(odd){
+    background-color: rgb(26, 79, 193);}
