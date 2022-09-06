@@ -1,11 +1,19 @@
+@mixin rotate ( $deg ) {
+    transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+
+}
+
 body{ 
     background-color:red; 
     border:2px dashed red;
-
+    @include rotate(90deg);
     .bodyHeader{
         border: 2px dashed blue;
-
+        @include rotate(180deg);
         h1{
+            @include rotate(270deg);
             margin:0;
         }
     }   
