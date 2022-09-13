@@ -10,7 +10,7 @@ const views = [ //tablica obiektów
         "alt" : "Skyscrapers" 
     },
     {
-        "src" : "1.webp",
+        "src" : "3.webp",
         "name" : "Trzeci",
         "alt" : "Beach"
     },
@@ -31,17 +31,17 @@ getSingleView(currentSlide)
 
 function modifyCurrentSide(direction){
     
-    if(direction = 'right'){
+    if(direction == 'right'){
         currentSlide++;
     }
     if(currentSlide >= views.length){
         currentSlide = 0;
     }
-    if(direction = 'left'){
+    if(direction == 'left'){
         currentSlide--;
     }
-    if(currentSlide <= views.length){
-        currentSlide = 3
+    if(currentSlide < 0){
+        currentSlide = 2;
     }
     getSingleView(currentSlide)
     }
