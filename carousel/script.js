@@ -41,12 +41,12 @@ function modifyCurrentSide(direction){
         currentSlide--;
     }
     if(currentSlide < 0){
-        currentSlide = 2;
+        currentSlide = views.length - 1;
     }
     getSingleView(currentSlide)
     }
 const rightArr = document.querySelector(".right") 
 rightArr.onclick = function(){modifyCurrentSide('right')}
 
-const leftArr = document.querySelector(".letf")
+const leftArr = document.querySelector(".left")
 leftArr.onclick = function(){modifyCurrentSide('left')}
