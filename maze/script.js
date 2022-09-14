@@ -1,19 +1,10 @@
-let vLET = 1;
-var vVar = 1; 
-console.log(window)
 
-let x = 0
-function test() {
-    const x = 0;
-}
+const wall = document.createElement('div')
+wall.style.cssText = "border: 10px solid green;"
 
-test()
-//console.log(x)
 
-if(2 == 2){
-    let llet = 1;
-    var vvar = 1;
-}
+const gamePlane = document.querySelector('.gamePlane')
+gamePlane.append(wall)
 
-console.let(vvar)
-console.log(llet)
+
+console.log(wall)
