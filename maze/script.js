@@ -82,10 +82,10 @@ const game = {
     // metodę game.metaTrigger)
     game.buttons.meta.addEventListener('mousemove', game.metaTrigger)
     
-    gamePlane.addEventListener('mousemove', game.wallListener)
+    gamePlane.addEventListener('mousemove', game.gamePlaneListener)
     console.log("GAME STARTED")
     for(const wall of game.buttons.walls){
-        wall.addEventListener('mousemove', game.gamePlaneListener)
+        wall.addEventListener('mousemove', game.wallListener)
     }
 
     console.log("GAME STARTED")
@@ -94,7 +94,7 @@ const game = {
     e.stopPropagation();
   },
   gamePlaneListener(e){
-    console.log('gamePlane listen')
+    game.over(false)
     //console.log('CHECKING', e)
   },
   // metoda wywołująca się po nakierowaniu myszką na metę
@@ -115,10 +115,9 @@ const game = {
     // na polu meta)
     game.buttons.meta.removeEventListener('mousemove', game.metaTrigger)
 
-    gamePlane.removeEventListener('mousemove', game.wallListener)
-    console.log("GAME STARTED")
+    gamePlane.removeEventListener('mousemove', game.gamePlaneListener)
     for(const wall of game.buttons.walls){
-        wall.removeEventListener('mousemove', game.gamePlaneListener)
+        wall.removeEventListener('mousemove', game.wallListener)
     }
     // przygotuj nową grę
     game.init()
@@ -127,3 +126,41 @@ const game = {
 // przygotuj grę
 // ta metoda wywołuje się po każdym odświeżeniu strony
 game.init()
+
+
+//KOMUNIKATY
+const modal = {
+    dom : document.createElement("div"),
+    init(){
+        modal.dom.style.cssText = `
+        border: 10px dashed red;
+        position:fixed;
+        width:80vw;
+        height:80vh;
+        left:10vw;
+        top:10vh;
+        background:red; 
+        display:none;
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;
+        `
+        document.body.append(modal.dom)
+
+        const h1 = document.createElement("h1")
+        h1.innerHTML = "H1"
+        modal.dom.append(h1)
+
+        const button = document.createElement("button")
+        button.innerHTML = " OK "
+        button.onclick = function(){modal.hide()}
+        modal.dom.append(button)
+
+    },
+    show(){
+        modal.dom.style.display = "flex"
+
+    },
+}
+modal.init()
+modal.show()
