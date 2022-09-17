@@ -42,7 +42,7 @@ function makeWall(x, y, w, h, type = 'wall') {
 // tablica map przechowująca tablice zawierające informacje o ścianie
 // (każdy pojedyńczy element tablicy map to jedna ściana)
 const map = [
-  [90,0,20,20, 'time'],
+  [80, 0, 20, 20, 'time'],
   [0,0,20,21, 'start'],
   [10,20,20,11],
   [20,30,20,11],
@@ -64,8 +64,8 @@ for(const wall of map){
 
 // mechanika gry
 const game = {
-  time : 10,
   // definiujemy wszystkie aktywne elementy gry
+  maxTime : 5,
   buttons: {
     time: document.querySelector('.time'),
     start: document.querySelector('.start'),
@@ -76,6 +76,7 @@ const game = {
   init(){
     // przypisz do pola start możliwość kliknięcia i rozpoczęcia gry
     game.buttons.start.onclick = function () { game.start() }
+    game.time = game.maxTime
     game.buttons.time.innerHTML = game.time
   },
   start(){ // start gry
@@ -94,9 +95,11 @@ const game = {
       // żadnych innych słuchaczy (eventListenerów)
       wall.addEventListener('mousemove', game.wallListener)
     }
+
     game.interval = setInterval(function(){
       game.time--
-      console.log("LOGUJĘ !", game.time)
+      if(game.time < 0) { game.over(false) }
+      game.buttons.time.innerHTML = game.time
     }, 1000)
 
     console.log("GAME STARTED")
@@ -112,9 +115,11 @@ const game = {
   over(result){
     // wyświetl odpowiedni komunikat
     if(result){
-      modal.show('WYGRANA!')
+      modal.show('WYGRANA!', 'green')
+      document.body.style.backgroundColor = "green"
     }else{
-      modal.show('PRZEGRANA!')
+      modal.show('PRZEGRANA!', 'red')
+      document.body.style.backgroundColor = "red"
     }
     // zdejmij słuchacza z pola meta (przestajemy nasłuchiwać kursor 
     // na polu meta)
@@ -124,6 +129,8 @@ const game = {
     for(const wall of game.buttons.walls){
       wall.removeEventListener('mousemove', game.wallListener)
     }
+
+    clearInterval(game.interval)
 
     // przygotuj nową grę
     game.init()
@@ -169,19 +176,21 @@ const modal = {
     button.onclick = function () { modal.hide() }
     modal.dom.append(button)
   },
-  show(text) { 
+  show(text, color = '#aa6969') { 
+    modal.dom.style.backgroundColor = color
     modal.dom.style.display = "flex";
     modal.h1.innerHTML = text
   },
   hide(){
     modal.dom.style.display = "none";
+    document.body.style.backgroundColor = "#fff"
   }
 
 }
 
 
 modal.init()
-modal.show('KLIKNIJ NA NIEBIESKI KAFELEK, ABY ROZPOCZĄĆ GRĘ <br/> PRZESUŃ KURSOR NA POMARAŃCZOWY, ABY WYGRAĆ')
+// modal.show('KLIKNIJ NA NIEBIESKI KAFELEK, ABY ROZPOCZĄĆ GRĘ <br/> PRZESUŃ KURSOR NA POMARAŃCZOWY, ABY WYGRAĆ')
 
 
 game.init()
