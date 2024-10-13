@@ -1,150 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MOJA 1 STRONA</title>
-  <link rel="stylesheet" href="style/style.css">  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profesjonalne remonty mieszkań, domów i biur.">
+    <title>Firma Remontowa - Profesjonalne usługi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="bodyHeader">
-    <h1>
-      Portfolio - Karol Kokoszka 😊
-    </h1>
-  
-    <!-- GŁÓWNA NAWIGACJA -->
-    <nav>
-      <!-- ORDERED LIST - LISTA NUMEROWANA -->
-      <!-- LIST ITEM - ELEMENT LISTY -->
-      <!-- <ol>
-        <li>list item1 </li>
-        <li>list item2 </li>
-        <li>list item3 </li>
-      </ol> -->
-      <input type="checkbox" id="toggler">
-      <label for="toggler">
-        <div></div>
-        <div></div>
-        <div></div>
-      </label>
-
-      <!-- UNORDERED LIST - LISTA NIENUMEROWANA -->
-      <ul>
-        <li>
-          <a href="#about">
-            <span class="material-symbols-outlined">person</span>
-            O MNIE
-          </a>
-        </li>
-        <li>
-          <a href="#skills">
-            <span class="material-symbols-outlined">star</span>
-            UMIĘTNOŚCI
-          </a>
-        </li>
-        <li>
-          <a href="#contact">
-            <span class="material-symbols-outlined">Phone</span>
-            KONTAKT
-          </a>
-        </li>
-      </ul>
-
-    </nav>
-  </header>
-
-  <main id="about" class="wrapper">
     <header>
-      <h2>O MNIE</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptas recusandae pariatur omnis facilis, obcaecati dolorem quos eum nemo blanditiis itaque veniam doloribus sit. Tempora, debitis? Aspernatur inventore cum dicta?</p>
-    </header>
-      <div class="content">
-         <img src="https://pl.wizcase.com/wp-content/uploads/2022/02/en-visual-studio-code-logo.jpg" />
-      </div>
-  </main>
-
-  <article id="skills" class="wrapper">
-    <header>
-      <h2>UMIĘTNOŚCI</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iure quisquam eaque, culpa perspiciatis explicabo tempore reiciendis facilis impedit et? Atque vero obcaecati reprehenderit illo laborum dolores explicabo dolorem inventore?</p>
-    </header>
-      <div class="content">
-        <!-- im większy border tym grubsza tabelka -->
-        <div class="tableWrapper">
-          <table>
-            <!-- nagłówek tabeli -->
-            <thead>
-              <!-- wiersz nagłówkowy -->
-              <tr>
-                <!-- TABLE HEADING komórka nagłówka -->
-                <th>LP. </th>
-                <th>TECHNOLOGIA</th>
-                <th>BIEGŁOŚĆ</th>
-              </tr>
-            </thead>
-      
-            <!-- tabela właściwa (dane) -->
-            <tbody>
-              <!-- TABLE ROW (wiersz) -->
-              <tr>
-                <!-- TABLE DIVIDE (podział wiersza) -->
-                <td>1</td>
-                <td>HTML</td>
-                <td>⭐⭐⭐</td>
-              </tr>
-      
-              <tr>
-                <td>2</td>
-                <td>CSS</td>
-                <td>⭐</td>
-              </tr>
-
-              <tr>
-                <td>3</td>
-                <td>SASS(SCSS)</td>
-                <td>⭐⭐</td>
-              </tr>
-      
-            </tbody>
-          </table>
+        <div class="logo">
+            <h1>Firma Remontowa</h1>
         </div>
-      </div>
-
-  </article>
-
-
-  <section id="contact" class="wrapper">
-    <header>
-      <h3>KONTAKT</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus pariatur accusamus, voluptas asperiores quo libero quidem distinctio sapiente hic debitis ipsum cupiditate tempore ex optio sunt doloribus. Necessitatibus, corrupti.</p>
+        <nav>
+            <ul>
+                <li><a href="#o-nas">O nas</a></li>
+                <li><a href="#uslugi">Usługi</a></li>
+                <li><a href="#realizacje">Realizacje</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="content">
-        <form>
-          <input type="email" placeholder="EMAIL" />
-          <input type="text" placeholder="TYTUŁ">
-          <textarea cols="21" rows="5" placeholder="WIADOMOŚĆ"></textarea>
-          <input type="submit" value="WYŚLIJ">
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Profesjonalne remonty, które zmieniają wnętrza</h2>
+            <p>Oferujemy kompleksowe usługi remontowe dostosowane do Twoich potrzeb.</p>
+            <a href="#kontakt" class="btn">Skontaktuj się z nami</a>
+        </div>
+    </section>
+
+    <section id="o-nas" class="about">
+        <h2>O nas</h2>
+        <p>Jesteśmy firmą remontową z wieloletnim doświadczeniem. Naszą misją jest dostarczanie najwyższej jakości usług, które spełnią oczekiwania każdego klienta.</p>
+        <img src="https://via.placeholder.com/400" alt="Zespół remontowy">
+    </section>
+
+    <section id="uslugi" class="services">
+        <h2>Nasze usługi</h2>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/300" alt="Remont łazienki">
+            <h3>Remont łazienek</h3>
+            <p>Wykonujemy nowoczesne i funkcjonalne łazienki z dbałością o każdy szczegół.</p>
+        </div>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/300" alt="Remont kuchni">
+            <h3>Remont kuchni</h3>
+            <p>Tworzymy kuchnie, które łączą styl z funkcjonalnością.</p>
+        </div>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/300" alt="Wykończenia wnętrz">
+            <h3>Wykończenia wnętrz</h3>
+            <p>Zadbamy o to, by Twoje wnętrza były nie tylko piękne, ale i praktyczne.</p>
+        </div>
+    </section>
+
+    <section id="realizacje" class="portfolio">
+        <h2>Nasze realizacje</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/300" alt="Projekt 1">
+            <img src="https://via.placeholder.com/300" alt="Projekt 2">
+            <img src="https://via.placeholder.com/300" alt="Projekt 3">
+        </div>
+    </section>
+
+    <section id="kontakt" class="contact">
+        <h2>Kontakt</h2>
+        <form id="contact-form" action="#" method="post">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Wyślij wiadomość</button>
         </form>
-      </div>
-  </section>
-  <footer>
-    <ol>
-      <li>
-        <a href="#about">O MNIE</a>
-      </li>
-      <li>
-        <a href="#skills">UMIĘTNOŚCI</a>
-      </li>
-      <li>
-        <a href="#contact">KONTAKT</a>
-      </li>
-    </ol>
-  </footer>
+        <div class="contact-info">
+            <p>Email: kontakt@firmaremontowa.pl</p>
+            <p>Telefon: 123-456-789</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Firma Remontowa. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
